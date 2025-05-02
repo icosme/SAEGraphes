@@ -1,6 +1,6 @@
 # Oracle de Bacon - À la conquête d'Hollywood
 
-Une implémentation Java du concept des "Six degrés de séparation de Kevin Bacon" permettant d'explorer les relations entre acteurs d'Hollywood.
+Une implémentation Java du concept des "Six degrés de Kevin Bacon" permettant d'explorer les relations entre acteurs d'Hollywood.
 
 ## Fonctionnalités
 
