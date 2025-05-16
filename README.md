@@ -1,7 +1,5 @@
 # Oracle de Bacon - À la conquête d'Hollywood
 
-Une implémentation Java du concept des "Six degrés de Kevin Bacon" permettant d'explorer les relations entre acteurs d'Hollywood.
-
 ## Fonctionnalités
 
 - **Conversion de données JSON** en graphe de collaborations
@@ -12,7 +10,7 @@ Une implémentation Java du concept des "Six degrés de Kevin Bacon" permettant 
 
 ## Auteurs
 
-- COSME VINOU Ilona
-- []
+- Ilona
+- Bastien
 
 Projet réalisé dans le cadre de la SAÉ 2.02 - IUT d'Orléans (2024-2025)
