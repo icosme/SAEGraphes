@@ -10,7 +10,7 @@
 
 ## Auteurs
 
-Ilona
+Ilona et
 Bastien
 
 Projet réalisé dans le cadre de la SAÉ 2.02 - IUT d'Orléans (2024-2025)
