@@ -7,12 +7,12 @@ import org.jgrapht.graph.SimpleGraph;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ConvertisseurJSON {
     
-
     class Film {
         private String title;
         private List<String> cast;  
@@ -41,49 +41,45 @@ public class ConvertisseurJSON {
         private int year;
     }
 
-    public Graph<String, DefaultEdge> jsonVersGraphe(String cheminFichier) {
+    public Graph<String, DefaultEdge> jsonVersGraphe(String cheminFichier) throws IOException {
 
         Graph<String, DefaultEdge> graphe = new SimpleGraph<>(DefaultEdge.class);
         
-        try {
+        BufferedReader lecteur = new BufferedReader(new FileReader(cheminFichier));
+        List<String> lignes = new ArrayList<>();
+        String ligne = lecteur.readLine();
 
-            BufferedReader lecteur = new BufferedReader(new FileReader(cheminFichier));
-            List<String> lignes = new ArrayList<>();
-            String ligne = lecteur.readLine();
-
-            while (ligne != null) {
-                lignes.add(ligne);
-                ligne = lecteur.readLine();
-            }
-            
-            lecteur.close();
-            
-            Gson gson = new Gson();
+        while (ligne != null) {
+            lignes.add(ligne);
+            ligne = lecteur.readLine();
+        }
         
-            for (String ligneJSON : lignes) {
-                Film film = gson.fromJson(ligneJSON, Film.class);
-                
-                if (film.getCast() != null && !film.getCast().isEmpty()) {
+        lecteur.close();
+        
+        Gson gson = new Gson();
+    
+        for (String ligneJSON : lignes) {
+            Film film = gson.fromJson(ligneJSON, Film.class);
+            
+            if (film.getCast() != null && !film.getCast().isEmpty()) {
 
-                    for (String acteur : film.getCast()) {
-                        if (!graphe.containsVertex(acteur)) {
-                            graphe.addVertex(acteur);
-                        }
+                for (String acteur : film.getCast()) {
+                    if (!graphe.containsVertex(acteur)) {
+                        graphe.addVertex(acteur);
                     }
-                    
-                    for (String acteur1 : film.getCast()) {
-                        for (String acteur2 : film.getCast()) {
+                }
+                
+                for (String acteur1 : film.getCast()) {
+                    for (String acteur2 : film.getCast()) {
 
-                            if (!acteur1.equals(acteur2) && !graphe.containsEdge(acteur1, acteur2)) {
-                                graphe.addEdge(acteur1, acteur2);
-                            }
+                        if (!acteur1.equals(acteur2) && !graphe.containsEdge(acteur1, acteur2)) {
+                            graphe.addEdge(acteur1, acteur2);
                         }
                     }
                 }
             }
-        } catch (Exception e) {
-            System.err.println("Erreur lors de la lecture du fichier: " + e.getMessage());
         }
         
         return graphe;
-    }}
+    }
+}

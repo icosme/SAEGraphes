@@ -7,3 +7,5 @@ mvn archetype:generate -DgroupId=fr.sae_graphes.main \
 mvn exec:java -Dexec.mainClass="fr.sae_graphes.main.App"
 
 mvn compile
+
+dot -T pdf acteurs_graph.dot -o acteurs_graph.pdf

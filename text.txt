@@ -1,9 +1,0 @@
-mvn archetype:generate -DgroupId=fr.sae_graphes.main \
--DartifactId=main \
--DarchetypeGroupId=org.jgrapht.archetypes \
--DarchetypeArtifactId=maven-archetype-jgrapht \
--DarchetypeVersion=1.2.0
-
-mvn exec:java -Dexec.mainClass="fr.sae_graphes.main.App"
-
-mvn compile
