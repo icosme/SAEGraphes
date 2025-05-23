@@ -13,6 +13,10 @@ public class CollaborateursEnCommun {
         this.graphe = new SimpleGraph<>(DefaultEdge.class);
     }
 
+    public CollaborateursEnCommun(Graph<String, DefaultEdge> graphe) {
+        this.graphe = graphe;
+    }
+
     public Graph<String, DefaultEdge> getGraphe() {
         return graphe;
     }

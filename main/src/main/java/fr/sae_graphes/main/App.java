@@ -11,7 +11,7 @@ import org.jgrapht.graph.DefaultEdge;
 public class App {
     public static void main(String[] args) {
         // Chemin vers le fichier de données
-        String cheminFichier = "../../../../../target/data_100.txt"; // Ajustez ce chemin selon l'emplacement de votre fichier
+        String cheminFichier = "data_100.txt"; // Ajustez ce chemin selon l'emplacement de votre fichier
         
         // Création d'une instance de ConvertisseurJSON
         ConvertisseurJSON convertisseur = new ConvertisseurJSON();
