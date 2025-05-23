@@ -2,10 +2,10 @@
 
 ## Fonctionnalités
 
-[x] **Conversion de données JSON** en graphe de collaborations
-[] **Recherche de collaborateurs communs** entre deux acteurs
-[] **Identification des acteurs proches** à distance maximale k
-[] **Vérification de distance** entre deux acteurs
+- [X] **Conversion de données JSON** en graphe de collaborations
+- [ ] **Recherche de collaborateurs communs** entre deux acteurs
+- [ ] **Identification des acteurs proches** à distance maximale k
+- [ ] **Vérification de distance** entre deux acteurs
 
 
 ## Auteurs
