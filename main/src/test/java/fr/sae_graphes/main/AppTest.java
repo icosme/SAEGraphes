@@ -42,4 +42,24 @@ public class AppTest
         assertEquals(1, graph.outDegreeOf(v1));
         assertEquals(0, graph.outDegreeOf(v2));
     }
+
+    public static Graph<String, DefaultEdge> generateGraph() {
+		Graph<String, DefaultEdge> graph = new SimpleGraph<>(DefaultEdge.class);
+		graph.addVertex("Acteur 1");
+		graph.addVertex("Acteur 2");
+		graph.addVertex("Acteur 3");
+		graph.addVertex("Acteur 4");
+
+		graph.addEdge("Acteur 1", "Acteur 2");
+		graph.addEdge("chou", "alacreme");
+		graph.addEdge("chocolat", "noir");
+		graph.addEdge("pamplemousse", "a");
+
+		return graph;
+	
+	}
+    @Test
+    public void TestCollabCommun(){
+      Graph<String, DefaultEdge> graph = GraphTypeBuilder
+    }
 }
