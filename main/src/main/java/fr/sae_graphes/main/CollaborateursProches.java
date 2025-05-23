@@ -27,6 +27,7 @@ public class CollaborateursProches {
             System.out.println(u+" est un illustre inconnu");
             throw new PasDeTelActeurException();
         }
+        else{
         Set<String> col = new HashSet<>();
         col.add(u);
         for(int i = 0;i < k; ++i){
@@ -42,4 +43,5 @@ public class CollaborateursProches {
         }
         return col;
     }
+}
 }
