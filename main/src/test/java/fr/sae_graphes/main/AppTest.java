@@ -42,4 +42,8 @@ public class AppTest
         assertEquals(1, graph.outDegreeOf(v1));
         assertEquals(0, graph.outDegreeOf(v2));
     }
+    @Test
+    public void CollabProcheTest(){
+      
+    }
 }
